@@ -1,0 +1,9 @@
+name = "backend"
+compatibility_date = "2024-08-10"
+
+ [vars]
+  DATABASE_URL = ""
+ JWT_SECRET=""
+
+[dev]
+  port = 8787
