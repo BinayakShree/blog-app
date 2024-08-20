@@ -1,0 +1,50 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String    @id @default(uuid())
+  username       String    @unique
+  email          String    @unique
+  password       String
+  profilePicture String    @default("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  isAdmin        Boolean   @default(false)
+  Posts          Post[]
+  Comments       Comment[]
+  LikedComments  Comment[] @relation("UserLikesComment")
+}
+
+model Post {
+  id        String    @id @default(uuid())
+  title     String    @unique
+  content   String
+  image     String    @default("https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/09/how-to-write-a-blog-post.png")
+  category  String    @default("uncategorized")
+  slug      String    @unique
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Comments  Comment[]
+}
+
+model Comment {
+  id         String    @id @default(uuid())
+  content    String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  author     User      @relation(fields: [authorId], references: [id])
+  authorId   String
+  post       Post      @relation(fields: [postId], references: [id])
+  postId     String
+  likes      User[]    @relation("UserLikesComment")
+  likesCount Int       @default(0) 
+}

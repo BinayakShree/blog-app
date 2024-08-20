@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+
+}
+
+.ql-editor {
+  font-size: 1.05rem;
+}
+.ql-toolbar {
+  background-color: #f4f4f4; /* Light background for the toolbar */
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.ql-toolbar .ql-formats {
+  margin-right: 0.5rem;
+}
+
+.ql-toolbar .ql-picker {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+.ql-toolbar .ql-picker-label {
+  color: #333;
+}
+
+.ql-toolbar .ql-picker-options {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.ql-toolbar button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ql-toolbar button:hover {
+  background-color: #eee;
+}
+
+.dark .ql-toolbar {
+  background-color: #333;
+  border-bottom: 1px solid #444;
+}
+
+.dark .ql-toolbar .ql-picker {
+  border: 1px solid #555;
+}
+
+.dark .ql-toolbar .ql-picker-label {
+  color: #ddd;
+}
+
+.dark .ql-toolbar .ql-picker-options {
+  background-color: #444;
+  border: 1px solid #555;
+}
+
+.dark .ql-toolbar button:hover {
+  background-color: #555;
+}
+.ql-syntax code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ql-syntax pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.dark .ql-syntax code {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.dark .ql-syntax pre {
+  background: #222;
+  color: #e0e0e0;
+}
+.ql-toolbar .custom-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.ql-toolbar .custom-button:hover {
+  background-color: #0056b3;
+}
+
+.dark .ql-toolbar .custom-button {
+  background-color: #0056b3;
+}
+
+.dark .ql-toolbar .custom-button:hover {
+  background-color: #003d7a;
+}
+
+.post-content {
+  line-height: 1.7;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+/* Paragraphs */
+.post-content p {
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.post-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.post-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1.75rem 0 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1.5rem 0 1rem;
+}
+
+.post-content h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 1.25rem 0 1rem;
+}
+
+.post-content h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 0.5rem;
+}
+
+.post-content h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0.875rem 0 0.5rem;
+}
+
+/* Links */
+.post-content a {
+  color: rgb(73, 149, 199);
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+.dark .post-content a {
+  color: #4ecdc4;
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content ul li,
+.post-content ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+  border-left: 4px solid #ccc;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Code blocks */
+.post-content pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+.post-content code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+/* Images */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+/* Tables */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.post-content table th,
+.post-content table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.post-content table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+/* Horizontal rule */
+.post-content hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 2rem 0;
+}
+
+/* Text formatting */
+.post-content b,
+.post-content strong {
+  font-weight: 700;
+}
+
+.post-content i,
+.post-content em {
+  font-style: italic;
+}
+
+.post-content u {
+  text-decoration: underline;
+}
+
+.post-content del {
+  text-decoration: line-through;
+}
+
+.post-content sub {
+  font-size: 0.8rem;
+  vertical-align: sub;
+}
+
+.post-content sup {
+  font-size: 0.8rem;
+  vertical-align: super;
+}
+
+/* Dark mode adjustments */
+.dark .post-content {
+  color: #ddd;
+}
+
+.dark .post-content p {
+  color: #ccc;
+}
+
+.dark .post-content h1,
+.dark .post-content h2,
+.dark .post-content h3,
+.dark .post-content h4,
+.dark .post-content h5,
+.dark .post-content h6 {
+  color: #eee;
+}
+
+.dark .post-content a {
+  color: #4ecdc4;
+}
+
+.dark .post-content blockquote {
+  border-left-color: #555;
+  color: #ccc;
+}
+
+.dark .post-content pre {
+  background: #333;
+}
+
+.dark .post-content code {
+  background: #444;
+}
+
+.dark .post-content table th {
+  background-color: #444;
+}
+
+.dark .post-content table td {
+  background-color: #333;
+}
+
+.dark .post-content hr {
+  background: #555;
+}

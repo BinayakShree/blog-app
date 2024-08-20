@@ -1,0 +1,11 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "Welcome to my first full-stack project! This repository contains the codebase for a blogging application that I built to enhance my skills in web development. I have made this website with the latest technologies & followed the best practices",
+"scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "npm run dev --prefix frontend & npm run dev --prefix backend"
+  },
+  "author": "BinayakShree",
+  "license": "ISC"
+}
